@@ -1,5 +1,7 @@
 def median(ns):
     nls = sorted(ns)
-    return(nls)
-    
-print(median([4, 2, 6, 5, 4, 1, 2, 7, 6, 4, 5, 9]))
+    loc = len(nls) // 2
+    if len(nls) % 2 != 0:
+        return(nls[loc])
+    else:
+        return (nls[loc - 1] + nls[loc]) / 2
